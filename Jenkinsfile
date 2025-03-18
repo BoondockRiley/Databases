@@ -1,10 +1,26 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'liquibase:latest'
+    }
+
+  }
   stages {
     stage('Dev') {
-      steps {
-        echo 'Done'
-        git(url: 'https://github.com/BoondockRiley/Postgres', branch: 'main', poll: true, credentialsId: 'github-token2')
+      parallel {
+        stage('Dev') {
+          steps {
+            echo 'Done'
+            git(url: 'https://github.com/BoondockRiley/Postgres', branch: 'main', poll: true, credentialsId: 'github-token2')
+          }
+        }
+
+        stage('DockerImage') {
+          steps {
+            echo 'Docker'
+          }
+        }
+
       }
     }
 
