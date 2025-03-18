@@ -28,3 +28,4 @@ create table company (
 alter table person add column country varchar(2)
 --rollback ALTER TABLE person DROP COLUMN country;
 
+drop table company
