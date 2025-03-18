@@ -8,7 +8,7 @@ pipeline {
                 script {
                     // Run bash command using specific bash executable
                     bat '"C:\\Program Files\\Git\\bin\\bash.exe" -c "echo Hello from Bash!"'
-                    bat '"C:\\Program Files\\Git\\bin\\bash.exe" -c "echo liquibase --version"'
+                    bat '"C:\\Program Files\\Git\\bin\\bash.exe" -c "liquibase --version"'
                                     }
             }
         }
