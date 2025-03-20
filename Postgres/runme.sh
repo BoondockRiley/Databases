@@ -7,6 +7,7 @@ docker rm -f postgres-dev postgres-qa postgres-prod
 # Step 2: Pull the latest postgres image
 echo "*** Pulling latest postgres image..."
 docker pull postgres
+docker pull sqlserver
 
 # Step 3: Start PostgreSQL containers
 echo "*** Starting PostgreSQL containers..."
