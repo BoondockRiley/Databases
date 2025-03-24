@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <!-- Changeset to drop dbo.company table -->
+    <changeSet id="Drop SQL company" author="BenR">
+        <dropTable tableName="company" schemaName="dbo"/>
+    </changeSet>
+
+    <!-- Changeset to drop dbo.person table -->
+    <changeSet id="Drop SQL Person" author="BenRe">
+        <dropTable tableName="person" schemaName="dbo"/>
+    </changeSet>
+
+</databaseChangeLog>

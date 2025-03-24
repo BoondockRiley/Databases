@@ -6,10 +6,16 @@
         xmlns:pro="http://www.liquibase.org/xml/ns/pro"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
     http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd ">
+    
+    <preConditions>  
+        <runningAs  username="BenR"/>
+        <dbms type="Oracle" />
+    </preConditions>  
 
-      <changeSet id="1" author="your.name" labels="example-label" context="example-context">
+
+      <changeSet id="5" author="Ben.Riley" labels="XML Updates" context="Not Yet">
           <comment>example-comment</comment>
-        <createTable tableName="person">
+        <createTable tableName="person1">
             <column name="id" type="int" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
@@ -22,9 +28,9 @@
         </createTable>
     </changeSet>
 
-    <changeSet id="2" author="your.name" labels="example-label" context="example-context">
+    <changeSet id="6" author="Ben.Riley" labels="example-label" context="example-context">
         <comment>example-comment</comment>
-        <createTable tableName="company">
+        <createTable tableName="company1">
             <column name="id" type="int" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
@@ -37,10 +43,17 @@
         </createTable>
     </changeSet>
 
-    <changeSet id="3" author="other.dev" labels="example-label" context="example-context">
+    <changeSet id="7" author="other.dev" labels="example-label" context="example-context">
         <comment>example-comment</comment>
-        <addColumn tableName="person">
+        <addColumn tableName="person1">
             <column name="country" type="varchar(2)"/>
+        </addColumn>
+    </changeSet>
+
+        <changeSet id="8" author="TonyStart" labels="example-label" context="example-context">
+        <comment>example-comment</comment>
+        <addColumn tableName="person1">
+            <column name="address3" type="varchar(2)"/>
         </addColumn>
     </changeSet>
 </databaseChangeLog>
