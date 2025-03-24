@@ -11,7 +11,7 @@ pipeline {
                     bat '"C:\\Program Files\\Git\\bin\\bash.exe" -c "./runme.sh"'
                     bat '"C:\\Program Files\\Git\\bin\\bash.exe" -c "echo Hello from Bash!"'
                     bat '"C:\\Program Files\\Git\\bin\\bash.exe" -c "liquibase --version"'
-                    bat '"C:\\Program Files\\Git\\bin\\bash.exe" -c "liquibase update --changelog-file=example-changelog.sql"'
+                     bat '"C:\\Program Files\\Git\\bin\\bash.exe" -c "liquibase update --changelog-file=Postgres/example-changelog.sql"'
                                     }
             }
         }
